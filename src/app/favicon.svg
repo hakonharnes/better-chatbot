@@ -1,3 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-blend-icon lucide-blend"><circle cx="9" cy="9" r="7"></circle><circle cx="15" cy="15" r="7"></circle></svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
-@media (prefers-color-scheme: dark) { :root { filter: contrast(0.3846153846153846) brightness(4.5); } }
-</style></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211.4 211.4" width="211.4" height="211.4">
+  <rect x="0" y="0" width="211.4" height="211.4" rx="21.14" ry="21.14" fill="#161618"/>
+  <g transform="translate(20.53, -18.599999999999994)">
+    <path d="M15.20 48.60L15.20 154.80C15.20 185.20 28.60 200 54 200L83.20 200C111.20 200 128.80 182.80 128.80 147.20C128.80 111.60 111.20 94.40 83.20 94.40L36.40 94.40L36.40 48.60ZM81 114.80C99.40 114.80 107.40 124.40 107.40 147.20C107.40 170 99.40 179.40 81 179.40L60.20 179.40C43 179.40 36.40 171.80 36.40 153.80L36.40 114.80Z" fill="#ffffff"/>
+    <path d="M140.32 182.32L140.32 200L155.14 200L155.14 182.32Z" fill="#ffffff"/>
+  </g>
+</svg>

@@ -2,14 +2,7 @@
 
 import { useState, useRef } from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "ui/avatar";
-import {
-  Camera,
-  Loader2,
-  Upload,
-  Smile,
-  Sparkles,
-  ImageIcon,
-} from "lucide-react";
+import { Camera, Loader2, Upload, Smile, Sparkles } from "lucide-react";
 import { useFileUpload } from "@/hooks/use-presigned-upload";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
@@ -18,7 +11,6 @@ import { Button } from "ui/button";
 import { useTranslations } from "next-intl";
 
 import { EmojiAvatarDialog } from "./emoji-avatar-dialog";
-import { DefaultAvatarDialog } from "./default-avatar-dialog";
 import { GenerateAvatarDialog } from "./generate-avatar-dialog";
 
 interface UserAvatarUploadProps {
@@ -40,7 +32,6 @@ export function UserAvatarUpload({
   const t = useTranslations("User.Profile.common");
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [showDefaultDialog, setShowDefaultDialog] = useState(false);
   const [showEmojiDialog, setShowEmojiDialog] = useState(false);
   const [showGenerateDialog, setShowGenerateDialog] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -92,11 +83,6 @@ export function UserAvatarUpload({
   const handleUploadClick = () => {
     setIsOpen(false);
     fileInputRef.current?.click();
-  };
-
-  const handleDefaultAvatarClick = () => {
-    setIsOpen(false);
-    setShowDefaultDialog(true);
   };
 
   const handleEmojiClick = () => {
@@ -156,16 +142,6 @@ export function UserAvatarUpload({
               <Button
                 variant="ghost"
                 className="justify-start w-full"
-                onClick={handleDefaultAvatarClick}
-                disabled={isUploading}
-              >
-                <ImageIcon className="mr-2 size-4" />
-                {t("chooseDefault")}
-              </Button>
-
-              <Button
-                variant="ghost"
-                className="justify-start w-full"
                 onClick={handleEmojiClick}
                 disabled={isUploading}
               >
@@ -198,12 +174,6 @@ export function UserAvatarUpload({
       />
 
       {/* Dialogs */}
-      <DefaultAvatarDialog
-        open={showDefaultDialog}
-        onOpenChange={setShowDefaultDialog}
-        onSelect={onImageUpdate}
-      />
-
       <EmojiAvatarDialog
         open={showEmojiDialog}
         onOpenChange={setShowEmojiDialog}

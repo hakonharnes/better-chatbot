@@ -1,32 +1,18 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect } from "vitest";
 import { USER_ROLES } from "app-types/roles";
 import { getUserAvatar, getIsUserAdmin } from "./utils";
 
 describe("User Utils", () => {
-  beforeEach(() => {
-    delete process.env.DISABLE_DEFAULT_AVATAR;
-  });
-
   describe("getUserAvatar - Avatar Selection Logic", () => {
-    it("should prioritize user image over default", () => {
+    it("should return user image when set", () => {
       const result = getUserAvatar({ image: "https://example.com/avatar.jpg" });
       expect(result).toBe("https://example.com/avatar.jpg");
     });
 
-    it("should fall back to default avatar when no user image", () => {
-      expect(getUserAvatar({ image: null })).toBe("/pf.png");
-      expect(getUserAvatar({})).toBe("/pf.png");
-      expect(getUserAvatar({ image: "" })).toBe("/pf.png");
-    });
-
-    it("should respect DISABLE_DEFAULT_AVATAR environment flag", () => {
-      process.env.DISABLE_DEFAULT_AVATAR = "true";
-
+    it("should return empty string when no user image (fallback to initials)", () => {
       expect(getUserAvatar({ image: null })).toBe("");
       expect(getUserAvatar({})).toBe("");
-
-      // But still return user image when available
-      expect(getUserAvatar({ image: "custom.jpg" })).toBe("custom.jpg");
+      expect(getUserAvatar({ image: "" })).toBe("");
     });
   });
 
