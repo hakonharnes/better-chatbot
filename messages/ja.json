@@ -127,7 +127,22 @@
       "defaultToolKit": {
         "visualization": "データ可視化",
         "webSearch": "ウェブを検索"
-      }
+      },
+      "agent": "エージェント",
+      "mention": "メンション",
+      "tools": "ツール",
+      "tooManyToolsSelected": "選択されているツールが多すぎます。128個未満を選択してください",
+      "presetNamePlaceholder": "プリセット名",
+      "noMcpServersDetected": "MCPサーバーが検出されませんでした。",
+      "addServer": "サーバーを追加",
+      "error": "エラー",
+      "authorizationRequired": "認証が必要です",
+      "clickToAuthorize": "このMCPサーバーを認証してツールにアクセスするには、ここをクリックしてください。",
+      "auto": "自動",
+      "manual": "手動",
+      "none": "なし",
+      "mentionOnly": "@メンションのみ",
+      "noToolsAvailable": "利用可能なツールがありません"
     },
     "VoiceChat": {
       "title": "音声チャットモード",
@@ -362,6 +377,7 @@
     "authorizationRequiredDescription": "{serverName} のツールにアクセスするには認証が必要です。",
     "authorize": "認証",
     "authorizationFailed": "認証に失敗しました"
+    "noInstructions": "なし"
   },
   "Error": {},
   "Info": {

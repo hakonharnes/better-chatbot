@@ -127,7 +127,22 @@
       "defaultToolKit": {
         "visualization": "Visualización de datos",
         "webSearch": "Buscar en la web"
-      }
+      },
+      "agent": "Agente",
+      "mention": "Mención",
+      "tools": "Herramientas",
+      "tooManyToolsSelected": "Demasiadas herramientas seleccionadas, por favor selecciona menos de 128 herramientas",
+      "presetNamePlaceholder": "Nombre del Preajuste",
+      "noMcpServersDetected": "No se detectaron servidores MCP.",
+      "addServer": "Agregar un servidor",
+      "error": "error",
+      "authorizationRequired": "Se Requiere Autorización",
+      "clickToAuthorize": "Haz clic aquí para autorizar este servidor MCP y acceder a sus herramientas.",
+      "auto": "Automático",
+      "manual": "Manual",
+      "none": "Ninguno",
+      "mentionOnly": "solo @mención",
+      "noToolsAvailable": "No hay herramientas disponibles"
     },
     "VoiceChat": {
       "title": "Modo de Chat por Voz",
@@ -363,6 +378,7 @@
     "authorizationRequiredDescription": "{serverName} requiere autorización para acceder a sus herramientas.",
     "authorize": "Autorizar",
     "authorizationFailed": "Error de autorización"
+    "noInstructions": "Ninguno"
   },
   "Error": {},
   "Info": {
