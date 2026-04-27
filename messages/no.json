@@ -813,7 +813,7 @@
     "authorizationRequired": "Autorisasjon kreves",
     "authorizationRequiredDescription": "{serverName} krever autorisasjon for å få tilgang til verktøyene.",
     "authorize": "Autoriser",
-    "authorizationFailed": "Autorisasjon feilet"
+    "authorizationFailed": "Autorisasjon feilet",
     "noInstructions": "Ingen"
   }
 }
